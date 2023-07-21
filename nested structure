@@ -1,0 +1,29 @@
+struct employee
+{
+	int eno;
+	char ename[30];
+	struct joindate
+	{
+		int dd,mm,yy;
+	}d1;
+}e1[100];
+int main()
+{
+	int n,i,month;
+	printf("Enter Limit:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Enter Eno Ename dd mm yy:");
+		scanf("%d%s%d%d%d",&e1[i].eno,&e1[i].ename,&e1[i].d1.dd,&e1[i].d1.mm,&e1[i].d1.yy);
+		for(i=0;i<n;i++)
+		{
+			if(e1[i].d1.mm==month)
+			{
+				printf("\n Emp Number=%d",e1[i].eno);
+				printf("\n Emp Nmae=%s",e1[i].ename);
+				printf("\n Emp Join date=%d-%d-%d",e1[i].d1.dd,e1[i].d1.mm,e1[i].d1.yy);
+			}
+		}
+	}
+}# Structure-Program
