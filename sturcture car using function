@@ -1,0 +1,45 @@
+struct Car
+{
+	int cno;
+	char model_name[20];
+	char colour[20];
+	float cost;
+}c1;
+int main()
+{
+	void accept();
+	void disp();
+	int ch;
+	do
+	{
+	printf("\n 1-Accept car \n 2-disp car \n Enter Your Choice");
+	scanf("%d",&ch);
+	switch(ch)
+	{
+		case 1 :Accept();
+				break;
+		case 2 :Disp();
+				break;
+	    default:("Invalid Choice"); 					
+	}
+    }while(ch<3);
+}
+void accept()
+{
+	printf("\n Enter Car no:");
+	scanF("%d",c1.cno);
+	printf("\n Enter Car Model Name:");
+	scanf("%s",c1.model_name);
+	printf("\n Enter Car Colour:");
+	scanf("%s",c1.colour);
+	printf("\n Enter Cost");
+	scanf("%f",c1.cost);
+}
+void disp()
+{
+	printf("\n Car no=%d",c1.cno);
+	printf("\n Car Model=%s",c1.model_name);
+	printf("\n Car colour=%s",c1.colour);
+	printf("\n Car Cost=%f",c1.cost);
+}
+	
