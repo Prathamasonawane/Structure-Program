@@ -1,0 +1,27 @@
+struct Emp
+{
+	 int eno ;char ename[30];
+	 float sal;
+}e1[100];
+int main()
+{
+	int n,i;
+	printf("Enter Limit:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Enter empno ename sal:");
+		scanf("%d%s%f",&e1[i].eno,&e1[i].ename,&e1[i].sal);
+	}
+	for(i=0;i<n;i++)
+	{
+		if(e1[i].sal>=50000)
+		{
+			printf("\n Emp No=%d",e1[i].eno);
+			printf("\n Name=%s",e1[i].ename);
+			printf("\n Salary=%f",e1[i].sal);
+		}
+	}
+		
+}
+	
